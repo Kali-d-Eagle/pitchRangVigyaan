@@ -50,7 +50,8 @@
         .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 50%; background-color: var(--glow-color); transition: all 0.3s ease; }
         .nav-link:hover::after, .nav-link.active::after { width: 100%; left: 0; }
         .page-title { color: var(--accent-color); text-shadow: 0 0 10px rgba(255, 138, 0, 0.5); }
-        .card-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+        .card-grid { display: flex; gap: 2rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+        .shop-grid {display: grid; gap: rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));}
         .card-item { opacity: 0; animation: card-cascade-in 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards; transition: transform 0.1s linear; }
         .card-item img { aspect-ratio: 16 / 10; object-fit: cover; }
         .product-card-img { aspect-ratio: 1 / 1 !important; border-radius: 1.5rem 1.5rem 0 0; transform: translateZ(40px); }
@@ -160,9 +161,10 @@
                     <button class="filter-btn px-6 py-2 rounded-full" data-category="pillow">Pillow Covers</button>
                     <button class="filter-btn px-6 py-2 rounded-full" data-category="wall">Wall Hangings</button>
                 </div>
-                <div id="product-grid" class="card-grid"></div>
+                <div id="product-grid" class="shop-grid"></div>
             </div>
         </section>
+
         <section id="learn" class="content-section">
             <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
                 <div class="section-header">
@@ -173,7 +175,7 @@
                      <div class="card-item glass-card glowing-border">
                         <div class="card-content-wrapper">
                            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 p-8">
-                                <img src="https://images.unsplash.com/photo-1615418195983-5c2191522813?w=800" alt="Ancient Art of Kolam" class="rounded-xl shadow-2xl w-full">
+                                <img src="ancientKolam.jpeg" alt="Ancient Art of Kolam" class="rounded-xl shadow-2xl w-full">
                                 <div class="text-center md:text-left">
                                     <h3 class="text-3xl font-bold page-title mb-4">A Journey Through Time</h3>
                                     <p class="text-gray-300 mb-6">Kolam is an ancient drawing tradition from Southern India, a form of ephemeral art passed down through generations. Traditionally drawn with rice flour by women at the thresholds of homes, these intricate patterns are more than just decoration; they are a daily ritual of welcome, harmony, and a connection to the cosmos.</p>
@@ -213,11 +215,15 @@
                 <div class="card-item glass-card glowing-border">
                      <div class="card-content-wrapper">
                         <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 p-8 md:p-12">
-                            <img src="m1.jpeg" alt="DIY Rangoli and Mandala Kit" class="rounded-xl shadow-2xl w-full">
+                            <img src="diyKit.jpeg" alt="DIY Rangoli and Mandala Kit" class="rounded-xl shadow-2xl w-full">
                             <div class="text-center md:text-left">
                                 <h3 class="text-3xl font-bold page-title mb-4">The RangVigyaan Explorer Kit</h3>
-                                <p class="text-gray-300 mb-6">A complete package to begin your journey. Perfect for family activities, school projects, or mindful relaxation.</p>
-                                <button class="btn mt-8 !text-lg !py-3 !px-6">Explore All Kits</button>
+                                <p class="text-gray-300 mb-6">Unleash your creativity with this vibrant DIY Rangoli kit! 🎨
+                                    A perfect blend of art and mindfulness, it helps you relax while crafting beauty.
+                                    Boost focus, express yourself, and add a handmade sparkle to your space.
+                                    Create, unwind, and let your imagination bloom! 🌸✨
+                                    </p>
+                                <!-- <button class="btn mt-8 !text-lg !py-3 !px-6">Explore All Kits</button> -->
                             </div>
                         </div>
                     </div>
@@ -231,9 +237,12 @@
                     <p>Explore the mesmerizing depth and form of Kolam and Rangoli in three dimensions. A fusion of tradition and futuristic 3D artistry, rendered to perfection.</p>
                 </div>
                 <div class="card-grid">
-                    <div class="card-item glass-card glowing-border"><div class="card-content-wrapper"><img src="https://images.unsplash.com/photo-1662996373754-8c878955de85?w=600" alt="3D Render of a spiral Kolam"><div class="p-4"><h3 class="text-lg font-bold text-center page-title">Crystalline Spiral</h3></div></div></div>
-                    <div class="card-item glass-card glowing-border"><div class="card-content-wrapper"><img src="https://images.unsplash.com/photo-1665413992994-010b91b3ac45?w=600" alt="3D Render of a floral Rangoli"><div class="p-4"><h3 class="text-lg font-bold text-center page-title">Neon Bloom</h3></div></div></div>
-                    <div class="card-item glass-card glowing-border"><div class="card-content-wrapper"><img src="https://images.unsplash.com/photo-1678225398282-c6f162438592?w=600" alt="3D Render of a metallic pattern"><div class="p-4"><h3 class="text-lg font-bold text-center page-title">Metalic Weave</h3></div></div></div>
+                    <div class="card-item glass-card glowing-border"><div class="card-content-wrapper"><img src="31.jpeg" alt="3D Render of a spiral Kolam"><div class="p-4"><h3 class="text-lg font-bold text-center page-title">Crystalline Spiral</h3></div></div></div>
+                    <div class="card-item glass-card glowing-border"><div class="card-content-wrapper"><img src="32.jpeg" alt="3D Render of a floral Rangoli"><div class="p-4"><h3 class="text-lg font-bold text-center page-title">Neon Bloom</h3></div></div></div>
+                    <div class="card-item glass-card glowing-border"><div class="card-content-wrapper"><img src="33.jpeg" alt="3D Render of a metallic pattern"><div class="p-4"><h3 class="text-lg font-bold text-center page-title">Metalic Weave</h3></div></div></div>
+                    <div class="card-item glass-card glowing-border"><div class="card-content-wrapper"><img src="34.jpeg" alt="3D Render of a metallic pattern"><div class="p-4"><h3 class="text-lg font-bold text-center page-title">Chromatic Lotus</h3></div></div></div>
+                    
+
                 </div>
             </div>
         </section>
