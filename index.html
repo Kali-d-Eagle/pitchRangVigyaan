@@ -310,6 +310,11 @@
             addToCart(id) { const i=this.state.cart.find(item=>item.id===id); if(i)i.quantity++; else this.state.cart.push({id,quantity:1}); this.saveState(); this.updateCounters(); this.renderProducts(); },
             toggleWishlist(id) { const i=this.state.wishlist.indexOf(id); if(i>-1)this.state.wishlist.splice(i,1); else this.state.wishlist.push(id); this.saveState(); this.updateCounters(); this.renderProducts(); },
             applyMesmerizingEffects() { document.querySelectorAll(".card-item, .glass-card.interactive-card").forEach(c=>{c.addEventListener("mousemove",e=>{const r=c.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top,rx=(y-r.height/2)/(r.height/2)*-8,ry=(x-r.width/2)/(r.width/2)*8;c.style.setProperty("--mx",`${x}px`);c.style.setProperty("--my",`${y}px`);c.style.transform=`perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) scale3d(1.05,1.05,1.05)`;});c.addEventListener("mouseleave",()=>{c.style.transition='transform 0.6s cubic-bezier(0.23,1,0.32,1)';c.style.transform='perspective(1000px) rotateX(0) rotateY(0) scale3d(1,1,1)';});c.addEventListener('mouseenter',()=>c.style.transition='transform 0.1s linear');}); }
+            
+            /* newPush */
+            renderCart(){}
+            renderWishlist(){}
+            renderOrders(){}
         };
         App.init();
 
