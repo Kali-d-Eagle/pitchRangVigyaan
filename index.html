@@ -407,6 +407,22 @@
         navigateTo('home');
         lucide.createIcons();
     });
+
+        /*  clickEventHandle */
+  // Wait for the DOM to load
+  document.addEventListener("DOMContentLoaded", function () {
+    // Select all card items
+    const cards = document.querySelectorAll(".card-item");
+
+    // Add click event listener to each card
+    cards.forEach(card => {
+      card.addEventListener("click", () => {
+        window.location.href = "https://rangvigyaan.netlify.app";
+      });
+    });
+  });
+
+
     </script>
 </body>
 </html>
